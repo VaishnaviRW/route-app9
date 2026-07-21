@@ -1,0 +1,28 @@
+<mat-card class="Mcard">
+    <div class="row">
+        <div class="col-md-6">
+            <img [src]="product.pimage" alt="">
+        </div>
+        <div class="col-md-6 info">
+            <h1 class="pb-4">{{product.pname}}</h1>
+            <h3 class="pb-4"><strong>Price:</strong> {{product.pprice}}</h3>
+            <h3 class="pb-4"><strong>Description:</strong> {{product.pdescription}}</h3>
+            <h3 class="pb-4"><strong>Is Returnable:</strong> {{product.canReturn ? 'Yes' : 'No'}}</h3>
+            <span class="badge badge-pill" [ngClass]="{
+                            'badge-primary' : product.pstatus === 'In-Progress',
+                            'badge-warning' : product.pstatus === 'Dispatched',
+                            'badge-success' : product.pstatus === 'Delivered'
+                        }">{{product.pstatus}}</span>
+
+            <div class="mt-5 d-flex justify-content-between">
+                <button
+                (click)="onEdit()"
+                    
+                 mat-raised-button color="primary">Edit</button>
+                <button 
+                (click)="onRemove()"
+                 mat-raised-button color="warn">Delete</button>
+            </div>
+        </div>
+    </div>
+</mat-card>

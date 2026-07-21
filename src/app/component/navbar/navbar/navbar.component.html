@@ -1,0 +1,95 @@
+<div class="container-fluid p-0" *ngIf="isLogin()">
+
+    <nav class="navbar-custom">
+
+        <div class="navbar-left">
+
+            <a [class.active]="activeMenu === 'home'"
+                (click)="onHome()"
+            routerLink="/home" class="navbar-brand">
+
+                <div class="logo">
+                    <mat-icon>dashboard</mat-icon>
+                </div>
+
+                <div class="brand-text">
+                    <h3>Admin Dashboard</h3>
+                    <small>Management System</small>
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="navbar-center">
+
+            <ul class="navbar-menu">
+
+                <li 
+                [class.active]="activeMenu === 'home'"
+                (click)="onHome()"
+                >
+                    <a routerLink="/home">
+                        <mat-icon>home</mat-icon>
+                        Home
+                    </a>
+                </li>
+
+                <li
+                [class.active]="activeMenu === 'users'"
+                >
+                    <a (click)="goToUsers()">
+                        <mat-icon>groups</mat-icon>
+                        Users
+                    </a>
+                </li>
+
+                <li
+                [class.active]="activeMenu === 'products'"
+                >
+                    <a (click)="goToProduct()">
+                        <mat-icon>inventory_2</mat-icon>
+                        Products
+                    </a>
+                </li>
+
+                <li
+                [class.active]="activeMenu === 'fairs'"
+                >
+                    <a (click)="goToFairs()">
+                        <mat-icon>festival</mat-icon>
+                        Fairs
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="navbar-right">
+
+            <div class="user-role">
+
+                <mat-icon>account_circle</mat-icon>
+
+                {{userRole}}
+
+            </div>
+
+            <button
+                mat-raised-button
+                color="warn"
+                class="logout-btn"
+                (click)="onLogOut()">
+
+                <mat-icon>logout</mat-icon>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </nav>
+
+</div>

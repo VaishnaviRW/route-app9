@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <mat-card class="mt-5 mb-5 p-4">
+            <h1 class="text-primary text-center">{{isineditmode ? 'Update Product' : 'Add Product'}}</h1>
+            <form [formGroup]="productform" (ngSubmit)="onAddProduct()">
+                <div class="form-group">
+                    <label for="pname" class="text-primary">Product Name*</label>
+                    <input type="text" id="pname" class="form-control" formControlName="pname">
+                    <strong
+                    *ngIf="productform.get('pname')?.touched && productform.get('pname')?.hasError('required')"
+                    class="text-danger"
+                    >Product Name is required filled...</strong>
+                </div>
+                <div class="form-group">
+                    <label for="pdescription" class="text-primary">Product Description*</label>
+                    <textarea rows="4" type="text" id="pdescription" class="form-control" formControlName="pdescription"></textarea>
+                    <strong
+                    *ngIf="productform.get('pdescription')?.touched && productform.get('pdescription')?.hasError('required')"
+                    class="text-danger"
+                    >Product Description is required filled...</strong>
+                </div>
+                <div class="form-group">
+                    <label for="pstatus" class="text-primary">Product Status*</label>
+                    <select type="text" id="pstatus" class="form-control" formControlName="pstatus">
+                        <option value="In-Progress">In-Progress</option>
+                        <option value="Dispatched">Dispatched</option>
+                        <option value="Delivered">Delivered</option>
+                    </select>
+                    <strong
+                    *ngIf="productform.get('pstatus')?.touched && productform.get('pstatus')?.hasError('required')"
+                    class="text-danger"
+                    >Product Status is required filled...</strong>
+                </div>
+                <div class="form-group">
+                    <label for="pprice" class="text-primary">Price*</label>
+                    <input type="text" id="pprice" class="form-control" formControlName="pprice">
+                    <strong
+                    *ngIf="productform.get('pprice')?.touched && productform.get('pprice')?.hasError('required')"
+                    class="text-danger"
+                    >Price is required filled...</strong>
+                </div>
+                <div class="form-group">
+                    <label for="canReturn" class="text-primary">Can Return*</label>
+                    <select type="text" id="canReturn" class="form-control" formControlName="canReturn">
+                        <option [ngValue]="1">Yes</option>
+                        <option [ngValue]="0">No</option>
+                    </select>
+                    <strong
+                    *ngIf="productform.get('canReturn')?.touched && productform.get('canReturn')?.hasError('required')"
+                    class="text-danger"
+                    >Can return is required filled...</strong>
+                </div>
+                <div class="form-group">
+                    <label for="pimage" class="text-primary">Img Url*</label>
+                    <input type="text" id="pimage" class="form-control" formControlName="pimage">
+                    <strong
+                    *ngIf="productform.get('pimage')?.touched && productform.get('pimage')?.hasError('required')"
+                    class="text-danger"
+                    >Image Url is required filled...</strong>
+                </div>
+
+                <button
+                *ngIf="!isineditmode"
+                 mat-raised-button color="primary" class="w-100">Add Product</button>
+                <button
+                *ngIf="isineditmode"
+                (click)="onUpadate()"
+                [disabled]="editobj.canReturn === 0"
+                 type="button" mat-raised-button color="primary" class="w-100">Update Product</button>
+            </form>
+        </mat-card>
+    </div>
+</div>

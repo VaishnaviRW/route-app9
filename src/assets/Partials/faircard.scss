@@ -1,0 +1,27 @@
+.fairCard{
+    cursor: pointer;
+    position: relative;
+
+    &.active{
+        background-image: linear-gradient(90deg, #18765B 0%, #156e71 100%);
+        color: #fff;
+    }
+
+    .typeAndDate{
+        background-color: #fff;
+        color : #000;
+        border-radius: 3px;
+        padding: 15px;
+    }
+}
+
+.fairCard.active::after{
+    content: '';
+    height: 20px;
+    width: 20px;
+    background-color: #156e71;
+    position: absolute;
+    top: calc(50% - 10px);
+    right: -10px;
+    transform: rotate(45deg);
+}
