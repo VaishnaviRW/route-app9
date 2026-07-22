@@ -50,14 +50,14 @@ export class AuthComponent implements OnInit {
       }
 
       this.authservice.Login(loginObj).subscribe({
-        next : res => {
+        next : (res: { message: string; token: string; userRole: string; }) => {
           this.snakbar.OpenSnakbar(res.message)
           this.authservice.saveToken(res.token)
           this.authservice.saveUserrole(res.userRole)
           this.router.navigate(['home'],
           )
         },
-        error : err => {
+        error : (err: { error: { message: string; }; }) => {
           console.log(err);
           this.snakbar.OpenSnakbar(err.error.message)
         }
@@ -73,11 +73,11 @@ export class AuthComponent implements OnInit {
         ...this.signInform.value
       }
       this.authservice.SignIn(userDetails).subscribe({
-        next :res => {
+        next :(res: { message: string; }) => {
           this.snakbar.OpenSnakbar(res.message)
           this.isAleradyHaveAccount = true
         },
-        error : err => {
+        error : (err: { error: { message: string; }; }) => {
           this.snakbar.OpenSnakbar(err.error.message)
           if(err.error.message){
             this.isAleradyHaveAccount = true

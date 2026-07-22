@@ -6,9 +6,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class SnakbarService {
 
-  constructor(
-    private _matsnakbar : MatSnackBar
-  ) { }
+  
+    constructor(private _matsnakbar: MatSnackBar) { }
+   
 
   OpenSnakbar(msg : string){
     this._matsnakbar.open(msg, 'close', {

@@ -21,14 +21,14 @@ export class FairDescriptionComponent implements OnInit {
   }
 
   getfairbyId(){
-    this.routes.paramMap.subscribe(res => {
+    this.routes.paramMap.subscribe((res: { get: (arg0: string) => any; }) => {
       let fairid = res.get('id')!
       this._fairservice.getfairById(fairid)
         .subscribe({
-          next : res => {
+          next : (res: Ifairs) => {
             this.fairdata = res!
           },
-          error : err => {
+          error : (err: any) => {
             console.log(err);
           }
         })

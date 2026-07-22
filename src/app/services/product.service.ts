@@ -9,59 +9,77 @@ export class ProductService {
 
   productsArr: Array<Iproduct> = [
     {
-    pid: 'P201',
-    pname: 'Apple MacBook Air M3',
-    pprice: 124999,
-    pstatus: 'Delivered',
-    canReturn: 1,
-    pdescription: '13.6-inch Liquid Retina Display, Apple M3 Chip, 16GB RAM, 512GB SSD.',
-    pimage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE9u-Gq_nfvMxAzx7BUbEUF37VF5Pn-jJqKPVrmcEAgA&s=10'
-  },
-  {
-    pid: 'P202',
-    pname: 'Samsung Galaxy S24 Ultra',
-    pprice: 129999,
-    pstatus: 'Dispatched',
-    canReturn: 1,
-    pdescription: '6.8-inch AMOLED Display, Snapdragon 8 Gen 3, 12GB RAM, 256GB Storage.',
-    pimage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckMqRPe5BEhv7x4bwKHQpqBKNg5Z9Q4qj_Lb2o-tcKv31vRUJP1fLhzM&s=10'
-  },
-  {
-    pid: 'P203',
-    pname: 'Sony WH-1000XM5',
-    pprice: 29990,
-    pstatus: 'In-Progress',
-    canReturn: 1,
-    pdescription: 'Premium Wireless Noise Cancelling Headphones with 30-hour battery life.',
-    pimage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6BuJLkP4bECcTPLexong_qtl8ACiVH5RL3f4M2wliw&s=10'
-  },
-  {
-    pid: 'P204',
-    pname: 'LG OLED evo 55" Smart TV',
-    pprice: 119990,
-    pstatus: 'Delivered',
-    canReturn: 0,
-    pdescription: '55-inch 4K OLED evo Display with Dolby Vision and Dolby Atmos.',
-    pimage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLYsL8DHNDp0tMzcEw3b8VYrtVHTkMGSmb6SnbYSbD_w&s=10  '
-  },
-  {
-    pid: 'P205',
-    pname: 'Dell XPS 15',
-    pprice: 169999,
-    pstatus: 'Dispatched',
-    canReturn: 1,
-    pdescription: 'Intel Core Ultra 7 Processor, 16GB RAM, 1TB SSD, NVIDIA RTX Graphics.',
-    pimage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx4WIADK-5lfMpIuhCGUFhwQE9hFMCjftM5IXgfuU_jg&s=10'
-  },
-  {
-    pid: 'P206',
-    pname: 'Apple Watch Series 10',
-    pprice: 46999,
-    pstatus: 'In-Progress',
-    canReturn: 1,
-    pdescription: 'Always-On Retina Display, GPS, Heart Rate Monitoring, Fitness Tracking.',
-    pimage: 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/s10-case-unselect-gallery-1-202409'
-  }
+      pid: 'P301',
+      pname: 'iPhone 16 Pro',
+      pprice: 139900,
+      pstatus: 'Delivered',
+      canReturn: 1,
+      pdescription: 'A18 Pro chip, 256GB storage, advanced camera system and titanium design.',
+      pimage: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569'
+    },
+    {
+      pid: 'P302',
+      pname: 'HP Victus Gaming Laptop',
+      pprice: 84999,
+      pstatus: 'Dispatched',
+      canReturn: 1,
+      pdescription: 'AMD Ryzen 7 Processor, 16GB RAM, 512GB SSD, RTX 4050 Graphics.',
+      pimage: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853'
+    },
+    {
+      pid: 'P303',
+      pname: 'Boat Airdopes 141',
+      pprice: 1499,
+      pstatus: 'In-Progress',
+      canReturn: 1,
+      pdescription: 'True wireless earbuds with ENx technology and 42 hours playback.',
+      pimage: 'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f37'
+    },
+    {
+      pid: 'P304',
+      pname: 'Samsung 55 Inch QLED TV',
+      pprice: 72999,
+      pstatus: 'Delivered',
+      canReturn: 0,
+      pdescription: '4K Ultra HD Smart QLED TV with Quantum HDR and voice assistant support.',
+      pimage: 'https://images.unsplash.com/photo-1593784991095-a205069470b6'
+    },
+    {
+      pid: 'P305',
+      pname: 'Sony PlayStation 5',
+      pprice: 54990,
+      pstatus: 'Dispatched',
+      canReturn: 1,
+      pdescription: 'Next-generation gaming console with ultra-high-speed SSD.',
+      pimage: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db'
+    },
+    {
+      pid: 'P306',
+      pname: 'Apple iPad Air',
+      pprice: 59900,
+      pstatus: 'Delivered',
+      canReturn: 1,
+      pdescription: 'M2 chip, 11-inch Liquid Retina display, Wi-Fi model.',
+      pimage: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0'
+    },
+    {
+      pid: 'P307',
+      pname: 'Noise ColorFit Pro 5',
+      pprice: 3999,
+      pstatus: 'In-Progress',
+      canReturn: 1,
+      pdescription: 'Smartwatch with AMOLED display, Bluetooth calling and health tracking.',
+      pimage: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30'
+    },
+    {
+      pid: 'P308',
+      pname: 'Canon EOS R50 Camera',
+      pprice: 67999,
+      pstatus: 'Delivered',
+      canReturn: 0,
+      pdescription: 'Mirrorless camera with 24.2MP APS-C sensor and 4K video recording.',
+      pimage: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32'
+    }
   ];
   constructor() { }
 

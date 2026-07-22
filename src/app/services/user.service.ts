@@ -11,105 +11,105 @@ export class UserService {
   refreshUsers$ = this.refreshUsers.asObservable();
   UsersDetails: Array<Iuser> = [
     {
-    userName: 'Aarav Sharma',
-    userId: 'EMP101',
-    userRole: 'Admin',
-    profileDescription: 'Passionate Angular developer with expertise in modern web applications.',
-    profileImage: 'https://cdn-icons-png.flaticon.com/512/4140/4140048.png',
-    skills: ['Angular', 'TypeScript', 'RxJS', 'SCSS'],
-    experienceYears: '3 to 5 years',
-    isActive: true,
-    address: {
-      current: {
-        city: 'Bengaluru',
-        state: 'Karnataka',
-        country: 'India',
-        zipcode: '560001'
+      userName: 'Rohan Patil',
+      userId: 'EMP201',
+      userRole: 'Admin',
+      profileDescription: 'Senior Angular developer with experience in enterprise applications.',
+      profileImage: 'https://cdn-icons-png.flaticon.com/512/4140/4140048.png',
+      skills: ['Angular', 'RxJS', 'NgRx', 'TypeScript'],
+      experienceYears: '7 to 10 years',
+      isActive: true,
+      address: {
+        current: {
+          city: 'Pune',
+          state: 'Maharashtra',
+          country: 'India',
+          zipcode: '411001'
+        },
+        permanent: {
+          city: 'Nashik',
+          state: 'Maharashtra',
+          country: 'India',
+          zipcode: '422001'
+        }
       },
-      permanent: {
-        city: 'Mysuru',
-        state: 'Karnataka',
-        country: 'India',
-        zipcode: '570001'
-      }
+      isAddSame: false
     },
-    isAddSame: false
-  },
-  {
-    userName: 'Priya Verma',
-    userId: 'EMP102',
-    userRole: 'Candidate',
-    profileDescription: 'Skilled in creating responsive and user-friendly web interfaces.',
-    profileImage: 'https://cdn-icons-png.flaticon.com/512/6997/6997662.png',
-    skills: ['HTML', 'CSS', 'Bootstrap', 'JavaScript'],
-    experienceYears: '1 to 3 years',
-    isActive: true,
-    address: {
-      current: {
-        city: 'Hyderabad',
-        state: 'Telangana',
-        country: 'India',
-        zipcode: '500001'
+    {
+      userName: 'Sneha Joshi',
+      userId: 'EMP202',
+      userRole: 'Candidate',
+      profileDescription: 'Frontend developer passionate about UI and UX design.',
+      profileImage: 'https://cdn-icons-png.flaticon.com/512/6997/6997662.png',
+      skills: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+      experienceYears: '1 to 3 years',
+      isActive: true,
+      address: {
+        current: {
+          city: 'Mumbai',
+          state: 'Maharashtra',
+          country: 'India',
+          zipcode: '400001'
+        },
+        permanent: {
+          city: 'Nagpur',
+          state: 'Maharashtra',
+          country: 'India',
+          zipcode: '440001'
+        }
       },
-      permanent: {
-        city: 'Warangal',
-        state: 'Telangana',
-        country: 'India',
-        zipcode: '506002'
-      }
+      isAddSame: true
     },
-    isAddSame: true
-  },
-  {
-    userName: 'Rahul Mehta',
-    userId: 'EMP103',
-    userRole: 'Admin',
-    profileDescription: 'Experienced in Angular, Node.js, and MongoDB development.',
-    profileImage: 'https://cdn-icons-png.flaticon.com/512/4140/4140048.png',
-    skills: ['Angular', 'Node.js', 'Express', 'MongoDB'],
-    experienceYears: '5 to 7 years',
-    isActive: false,
-    address: {
-      current: {
-        city: 'Ahmedabad',
-        state: 'Gujarat',
-        country: 'India',
-        zipcode: '380001'
+    {
+      userName: 'Aditya Singh',
+      userId: 'EMP203',
+      userRole: 'Admin',
+      profileDescription: 'Full-stack developer specializing in Angular and Node.js.',
+      profileImage: 'https://cdn-icons-png.flaticon.com/512/4140/4140048.png',
+      skills: ['Angular', 'Node.js', 'Express', 'MongoDB'],
+      experienceYears: '5 to 7 years',
+      isActive: false,
+      address: {
+        current: {
+          city: 'Delhi',
+          state: 'Delhi',
+          country: 'India',
+          zipcode: '110001'
+        },
+        permanent: {
+          city: 'Jaipur',
+          state: 'Rajasthan',
+          country: 'India',
+          zipcode: '302001'
+        }
       },
-      permanent: {
-        city: 'Surat',
-        state: 'Gujarat',
-        country: 'India',
-        zipcode: '395003'
-      }
+      isAddSame: false
     },
-    isAddSame: false
-  },
-  {
-    userName: 'Neha Kulkarni',
-    userId: 'EMP104',
-    userRole: 'Candidate',
-    profileDescription: 'Focused on building scalable Angular applications with clean architecture.',
-    profileImage: 'https://cdn-icons-png.flaticon.com/512/4140/4140047.png',
-    skills: ['Angular', 'TypeScript', 'REST API', 'Git'],
-    experienceYears: '3 to 5 years',
-    isActive: true,
-    address: {
-      current: {
-        city: 'Chennai',
-        state: 'Tamil Nadu',
-        country: 'India',
-        zipcode: '600001'
+    {
+      userName: 'Kavya Reddy',
+      userId: 'EMP204',
+      userRole: 'Candidate',
+      profileDescription: 'Angular developer focused on scalable and maintainable applications.',
+      profileImage: 'https://cdn-icons-png.flaticon.com/512/4140/4140047.png',
+      skills: ['Angular', 'REST API', 'Git', 'TypeScript'],
+      experienceYears: '3 to 5 years',
+      isActive: true,
+      address: {
+        current: {
+          city: 'Hyderabad',
+          state: 'Telangana',
+          country: 'India',
+          zipcode: '500001'
+        },
+        permanent: {
+          city: 'Vijayawada',
+          state: 'Andhra Pradesh',
+          country: 'India',
+          zipcode: '520001'
+        }
       },
-      permanent: {
-        city: 'Coimbatore',
-        state: 'Tamil Nadu',
-        country: 'India',
-        zipcode: '641001'
-      }
-    },
-    isAddSame: true
-  }
+      isAddSame: true
+    }
   ];
 
   constructor() { }

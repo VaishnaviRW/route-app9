@@ -18,7 +18,7 @@ export class FairsComponent implements OnInit {
 
   getfairsdata(){
     this._fairservice.getfairsArr()
-      .subscribe(res => {
+      .subscribe((res: Ifairs[]) => {
         this.fairsdata = res
       })
   }

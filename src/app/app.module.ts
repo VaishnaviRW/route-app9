@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NavbarComponent } from './component/navbar/navbar/navbar.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon'; 
-import { ReactiveFormsModule } from '@angular/forms';
+
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatChipsModule } from '@angular/material/chips';
 import { ProductsComponent } from './component/product/products/products.component';
@@ -25,6 +25,9 @@ import { FairscardComponent } from './component/fairs/fairscard/fairscard.compon
 import { FairDescriptionComponent } from './component/fairs/fair-description/fair-description.component';
 import { AuthComponent } from './component/auth/auth.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -41,20 +44,25 @@ import { HttpClientModule } from '@angular/common/http';
     FairsComponent,
     FairscardComponent,
     FairDescriptionComponent,
-    AuthComponent
+    AuthComponent,
+    
+
+
+    
+
+   
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserModule,
     MatDialogModule,
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    ReactiveFormsModule,
-    MatSnackBarModule,
     MatChipsModule,
-    HttpClientModule
+    MatSnackBarModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
