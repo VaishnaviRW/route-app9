@@ -10,28 +10,35 @@ import { FairsService } from 'src/app/services/fairs.service';
 })
 export class FairDescriptionComponent implements OnInit {
 
-  fairdata !: Ifairs
+  fairdata!: Ifairs;
+
   constructor(
-    private _fairservice :FairsService,
-    private routes : ActivatedRoute
-  ) { }
+    private _fairservice: FairsService,
+    private routes: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.getfairbyId()
+    this.getfairbyId();
   }
 
-  getfairbyId(){
-    this.routes.paramMap.subscribe((res: { get: (arg0: string) => any; }) => {
-      let fairid = res.get('id')!
-      this._fairservice.getfairById(fairid)
-        .subscribe({
-          next : (res: Ifairs) => {
-            this.fairdata = res!
-          },
-          error : (err: any) => {
-            console.log(err);
-          }
-        })
-    })
+  getfairbyId(): void {
+    this.routes.paramMap.subscribe(params => {
+
+      const fairid = params.get('id');
+
+      if (fairid) {
+        this._fairservice.getfairById(fairid)
+          .subscribe({
+            next: (res) => {
+              if (res) {
+                this.fairdata = res;
+              }
+            },
+            error: (err) => {
+              console.log(err);
+            }
+          });
+      }
+    });
   }
 }
